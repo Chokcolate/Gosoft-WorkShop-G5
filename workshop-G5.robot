@@ -73,8 +73,8 @@ login ข้อมูลส่วนตัว
 
 ตรวจสอบสรุุปรายการสั่งซื้อ
     #ที่อยู่จัดส่งสินค้า
-    Element Should Contain    xpath=${check_order}    ธีรวัต กาญจนปานวงษ์
-    Element Should Contain    xpath=${check_order}    เบอร์โทรศัพท์ผู้รับสินค้า: 0983209928
+    Element Should Contain    xpath=${check_order}    นัทธา ศิริไล
+    Element Should Contain    xpath=${check_order}    เบอร์โทรศัพท์ผู้รับสินค้า: 0816138216
     Element Should Contain    xpath=${check_order}    เซเว่นอีเลฟเว่น #00903 สาขา สนามกอล์ฟทหารบก
     ...                                               เลขที่ ถ.รามอินทรา, 459, แขวงอนุสาวรีย์ เขตบางเขน กรุงเทพฯ 10220
     #รายละเอียดสินค้า
