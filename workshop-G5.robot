@@ -61,7 +61,7 @@ login ข้อมูลส่วนตัว
     Click Element    xpath=//*[@id="address-tabs"]/ul/li[1]/a
     Click Element    xpath=//*[@id="storefinder-selector-group"]/div[1]/div/button
     Input Text    id=user-storenumber-input    00903
-    Wait Until Element Is Visible    id=btn-check-storenumber
+    Wait Until Element Is Visible    xpath=//*[@id="store"]/div[2]/div/div[4]/div[3]
     Click Element    id=btn-check-storenumber
 
 ดำเนินการชำระเงิน
@@ -81,8 +81,9 @@ login ข้อมูลส่วนตัว
     Element Should Contain    xpath=${check_order}    ไมโลบาร์ ช็อกโกแลต 30 กรัม 6 ฿ 366
     Element Should Contain    xpath=${check_order}    ราคา ฿ 366
     Element Should Contain    xpath=${check_order}    ค่าจัดส่ง ฟรี
-    # Wait Until Page Contains Element    xpath=${check_order}    ยอดสุทธิ ฿ 366
-    # Wait Until Page Contains Element    xpath=${check_order}    รับ ALL member Point 108
+    Element Should Contain    xpath=${check_order}    ยอดสุทธิ (รวมภาษีมูลค่าเพิ่ม) ฿ 366
+    Element Should Contain    xpath=${check_order}    รับ ALL member Point (คะแนน)
+    ...                                               (ได้รับเมื่อชำระเงินสำเร็จ) 108
     Click Element    xpath=//*[@id="stepModel"]/div[1]/div[2]/footer/div/div/button
 
 # กรอกข้อมูลบัตรเดบิตและยืนยัน
